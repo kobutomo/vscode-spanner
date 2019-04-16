@@ -16,20 +16,25 @@ export function activate(context: vscode.ExtensionContext) {
 	let disposable = vscode.commands.registerCommand('extension.spanner', () => {
 		vscode.window.showInformationMessage('Hello');
 		const editor = vscode.window.activeTextEditor;
-		if (editor && editor.selection.start && editor.selection.end) {
-			const selectRange = new vscode.Range(editor.selection.start, editor.selection.end);
-			const select = editor.document.getText(selectRange);
-			let newString = "";
-			console.log(select);
-			for (let i = 0; i < select.length; i++) {
-				newString += '<span>' + select[i] + '</span>';
+		const getInput = async () => {
+			const input = await vscode.window.showInputBox();
+			console.log(input);
+			if (editor && editor.selection.start && editor.selection.end) {
+				const selectRange = new vscode.Range(editor.selection.start, editor.selection.end);
+				const select = editor.document.getText(selectRange);
+				let newString = "";
+				console.log(select);
+				for (let i = 0; i < select.length; i++) {
+					newString += '<span>' + select[i] + '</span>';
+				}
+				editor.edit((builder) => {
+					builder.replace(selectRange, newString);
+				});
+			} else {
+				return false;
 			}
-			editor.edit((builder) => {
-				builder.replace(selectRange, newString);
-			});
-		} else {
-			return false;
-		}
+		};
+		getInput();
 	});
 
 	context.subscriptions.push(disposable);
