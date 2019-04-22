@@ -1,0 +1,37 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\Nodist\\v-x64\\6.11.0\\node.exe',
+1 verbose cli   'D:\\Nodist\\npmv\\4.0.5\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'watch' ]
+2 info using npm@4.0.5
+3 info using node@v6.11.0
+4 verbose run-script [ 'prewatch', 'watch', 'postwatch' ]
+5 info lifecycle spanner@0.0.1~prewatch: spanner@0.0.1
+6 warn lifecycle The node binary used for scripts is D:\Nodist\bin\node.exe but npm is using D:\Nodist\v-x64\6.11.0\node.exe itself. Use the `--scripts-prepend-node-path` option to include the path for the node binary npm was executed with.
+7 silly lifecycle spanner@0.0.1~prewatch: no script for prewatch, continuing
+8 info lifecycle spanner@0.0.1~watch: spanner@0.0.1
+9 verbose lifecycle spanner@0.0.1~watch: unsafe-perm in lifecycle true
+10 verbose lifecycle spanner@0.0.1~watch: PATH: D:\Nodist\npmv\4.0.5\bin\node-gyp-bin;d:\work\その他\vscodeExtension\spanner\node_modules\.bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;D:\Nodist\bin;C:\Program Files (x86)\Brackets\command;D:\var¥php;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\Users\tomoro.nishida\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\tomoro.nishida\AppData\Local\Programs\Python\Python37\;C:\Users\tomoro.nishida\AppData\Local\Microsoft\WindowsApps;C:\Users\tomoro.nishida\AppData\Local\atom\bin;C:\Users\tomoro.nishida\AppData\Local\Programs\Microsoft VS Code\bin
+11 verbose lifecycle spanner@0.0.1~watch: CWD: d:\work\その他\vscodeExtension\spanner
+12 silly lifecycle spanner@0.0.1~watch: Args: [ '/d /s /c', 'tsc -watch -p ./' ]
+13 verbose stack Error: kill ENOSYS
+13 verbose stack     at exports._errnoException (util.js:1018:11)
+13 verbose stack     at process.kill (internal/process.js:190:13)
+13 verbose stack     at process.listener (D:\Nodist\npmv\4.0.5\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:86:15)
+13 verbose stack     at emitNone (events.js:91:20)
+13 verbose stack     at process.emit (events.js:185:7)
+13 verbose stack     at processEmit (D:\Nodist\npmv\4.0.5\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+13 verbose stack     at processEmit (D:\Nodist\npmv\4.0.5\node_modules\npm-registry-client\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+13 verbose stack     at Signal.wrap.onsignal (internal/process.js:217:44)
+14 verbose cwd d:\work\その他\vscodeExtension\spanner
+15 error Windows_NT 10.0.17134
+16 error argv "D:\\Nodist\\v-x64\\6.11.0\\node.exe" "D:\\Nodist\\npmv\\4.0.5\\bin\\npm-cli.js" "run" "watch"
+17 error node v6.11.0
+18 error npm  v4.0.5
+19 error code ENOSYS
+20 error errno ENOSYS
+21 error syscall kill
+22 error kill ENOSYS
+23 error If you need help, you may report this error at:
+23 error     <https://github.com/npm/npm/issues>
+24 verbose exit [ 1, true ]
